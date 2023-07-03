@@ -27,11 +27,13 @@ export const authOptions: AuthOptions = {
       },
     }),
   ],
+  // session: {
+  //   strategy: "jwt",
+
+  // },
 
   callbacks: {
     async jwt({ token, user, account }) {
-      console.log({ token, user, account })
-
       return { ...token, ...user }
     },
 
